@@ -7,6 +7,7 @@ import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
+
 import fr.gtm.domaine.Conseiller;
 
 public class ConseillerServiceClient {
@@ -20,6 +21,7 @@ public class ConseillerServiceClient {
 	 *            conseiller de type Conseiller
 	 * @return boolean
 	 */
+
 
 	public boolean connexion(Conseiller conseiller) { // TODO verifier le type de retour
 
@@ -72,7 +74,8 @@ public class ConseillerServiceClient {
 		}
 
 		// System.out.println("les res = "+ res);
-		return output;
+		return true;
+
 	}
 
 }
