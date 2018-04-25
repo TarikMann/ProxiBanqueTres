@@ -27,7 +27,7 @@ public class MyResource {
     @Consumes(MediaType.APPLICATION_JSON)
 	public Response createTrackInJSON(Conseiller monConseiller) {
 
-//		monConseiller = new Conseiller(2, "tarik", "tarik", "mannou");
+		monConseiller = new Conseiller(2, "tarik", "tarik", "mannou");
 		System.out.println(monConseiller.getLogin());
 
 		ConseillerDao monConseillerDao = new ConseillerDao();
