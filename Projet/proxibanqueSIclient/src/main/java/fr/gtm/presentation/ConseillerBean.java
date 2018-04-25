@@ -7,7 +7,7 @@ import fr.gtm.domaine.Conseiller;
 import fr.gtm.service.ConseillerServiceClient;
 
 
-@ManagedBean(name = "conseillerbean") // annotation qui permet de donner un nom à un objet (non instancier), nom qui
+@ManagedBean(name = "conseillerbean") // annotation qui permet de donner un nom ï¿½ un objet (non instancier), nom qui
 // peut etre utiliser dans les pages
 
 @SessionScoped
@@ -40,7 +40,7 @@ private String password;
 	
 	
 
-	public Object appelTraitement() { // la Signature (retour Object) est documentée dans doc JSF commandButton /
+	public Object appelTraitement() { // la Signature (retour Object) est documentï¿½e dans doc JSF commandButton /
 		
 		// attribut action
 		//compte1.setSoldes(compte1.getSoldes()-somme);	
@@ -52,9 +52,9 @@ private String password;
 		
 ConseillerServiceClient service = new ConseillerServiceClient(); // instantiation d'un object conseillerservice
 //																			// pour l'appel de couche service
-		service.createUser(c);
+		service.connexion(monConseiller);
 
-//		if (service.createUser(Conseiller)) { // tous les objects creer pour un classe donnee peuvent utilisé les methodee
+//		if (service.createUser(Conseiller)) { // tous les objects creer pour un classe donnee peuvent utilisï¿½ les methodee
 //											// de
 //			// cette classe
 //			return "resultatOK";

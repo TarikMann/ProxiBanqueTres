@@ -7,7 +7,6 @@ import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
-
 import fr.gtm.domaine.Conseiller;
 
 public class ConseillerServiceClient {
@@ -22,13 +21,14 @@ public class ConseillerServiceClient {
 	 * @return boolean
 	 */
 
-
 	public boolean connexion(Conseiller conseiller) { // TODO verifier le type de retour
 
 		// creation d'un conseiller1 pour tester la méthode
 		// --------------------------------------------------
-		Conseiller conseiller1 = new Conseiller(1, "jean", "Louis", "3");
-		System.out.println(conseiller1);
+		// Conseiller conseiller1 = new Conseiller(1, "jean", "Louis", "3");
+		System.out.println("/=============");
+		System.out.println(conseiller);
+		System.out.println("/=============");
 
 		// creation d'un mapper
 		// --------------------------------------------------
@@ -48,10 +48,9 @@ public class ConseillerServiceClient {
 			System.out.println("Coté client... jsf...");
 			System.out.println(jsonInString);
 
-			// creation de la ressource
+			// creation du webservice
 			// --------------------------------------------------
-			WebResource webResource = client
-					.resource("http://localhost:8080/proxibanqueSIclient/json/authentification"); // TODO à vérifier
+			WebResource webResource = client.resource("http://192.168.1.70:8080/proxibanqueSIws/Tres/myresource"); // TODO																					// vérifier
 
 			// envoi de la requête POST
 			ClientResponse response = webResource.type("application/json").post(ClientResponse.class, jsonInString);
