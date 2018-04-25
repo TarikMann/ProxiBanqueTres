@@ -52,7 +52,7 @@ private String password;
 		
 ConseillerServiceClient service = new ConseillerServiceClient(); // instantiation d'un object conseillerservice
 //																			// pour l'appel de couche service
-//		service.createUser(c);
+		service.createUser(c);
 
 //		if (service.createUser(Conseiller)) { // tous les objects creer pour un classe donnee peuvent utilisé les methodee
 //											// de
