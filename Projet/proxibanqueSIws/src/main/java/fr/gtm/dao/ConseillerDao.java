@@ -10,7 +10,7 @@ public class ConseillerDao {
 
 	private ResultSet rs;
 
-	public Conseiller getConseillerConnexion(Conseiller monConseiller) {
+	public boolean conseillerConnexion(Conseiller monConseiller) {
 
 
 		Conseiller conseillerReturn = new Conseiller();
@@ -26,11 +26,12 @@ public class ConseillerDao {
 			// Affectation des propriétés de l'objet client
 			conseillerReturn.setIdConseiller(this.rs.getInt("conseiller_id"));
 			conseillerReturn.setNom(this.rs.getString("conseiller_nom"));
-
+			return true;
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		return conseillerReturn;
+			return false;
+		}	
+		
 	
 	}
 
