@@ -39,20 +39,23 @@ public class ConseillerServiceClient {
 			// creation du client
 			Client client = Client.create();
 
-			// conversion objet conseiller en String
+			// conversion objet conseiller JSON en String
+			// --------------------------------------------------
 			String jsonInString = mapper.writeValueAsString(conseiller);
 
 			System.out.println("Coté client... jsf...");
 			System.out.println(jsonInString);
 
 			// creation de la ressource
+			// --------------------------------------------------
 			WebResource webResource = client
 					.resource("http://localhost:8080/proxibanqueSIclient/json/authentification"); // TODO à vérifier
 
 			// envoi de la requête POST
 			ClientResponse response = webResource.type("application/json").post(ClientResponse.class, jsonInString);
 
-			// verification du statut de la reponse
+			// verification du statut de la reponse serveur
+			// --------------------------------------------------
 			if (response.getStatus() != 201) {
 				throw new RuntimeException("Failed : HTTP error code : " + response.getStatus());
 			}
