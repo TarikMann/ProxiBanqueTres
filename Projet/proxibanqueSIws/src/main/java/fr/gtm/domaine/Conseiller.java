@@ -1,12 +1,13 @@
 package fr.gtm.domaine;
 
 public class Conseiller {
+
 	private int IdConseiller;
 	private String nom;
 	private String login;
 	private String password;
-	
-	//Constructeur
+
+	// Constructeur
 	public Conseiller(int idConseiller, String nom, String login, String password) {
 		super();
 		IdConseiller = idConseiller;
@@ -15,11 +16,16 @@ public class Conseiller {
 		this.password = password;
 	}
 
+	public Conseiller() {
+		super();
+	}
+
+	// getter et setteur
+
 	public int getIdConseiller() {
 		return IdConseiller;
 	}
 
-	// getter et setteur
 	public void setIdConseiller(int idConseiller) {
 		IdConseiller = idConseiller;
 	}
@@ -48,9 +54,4 @@ public class Conseiller {
 		this.password = password;
 	}
 
-	public Conseiller() {
-		super();
-	}
-	
-	
 }
