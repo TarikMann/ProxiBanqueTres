@@ -16,8 +16,10 @@ public class Conseiller {
 			this.password = password;
 		}
 
-		public Conseiller() {
+		public Conseiller(String login, String password) {
 			super();
+			this.login = login;
+			this.password = password;
 		}
 
 		// getter et setteur
