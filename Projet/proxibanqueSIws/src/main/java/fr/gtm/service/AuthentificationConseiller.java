@@ -20,9 +20,7 @@ public class AuthentificationConseiller {
 	@Path("/post")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response createTrackInJSON(Conseiller monConseiller) {
-
-
-		
+System.out.println(user.getDatedenaissance());
 
 UserDao monUserDao = new UserDao();
 boolean ResultRequete = monUserDao.createClient(user);
